@@ -1,8 +1,11 @@
+#pragma warning(disable : 4996)
 #include<conio.h>
 #include<stdio.h>
 #include<string.h>
-#include <stdlib.h>
-int second_auth(char* name)
+#include<stdlib.h>
+#include"second_auth.h"
+
+int second_auth(char *name)
 {
 	char ID_type[20];
 	char ID_number[20];
@@ -87,3 +90,4 @@ int second_auth(char* name)
 	fclose(fp);
 
 }
+
