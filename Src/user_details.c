@@ -1,9 +1,11 @@
 #include<conio.h>
 #include<stdio.h>
 #include<string.h>
-#include <stdlib.h>
-#include "global.h"
+#include<stdlib.h>
+#pragma warning(disable : 4996)
+
 #include"user_details.h"
+//#include"candidate_details.c"
 int user_details(char* name)
 {
 	char buf[1024];
