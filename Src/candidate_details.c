@@ -1,8 +1,9 @@
 #include<conio.h>
 #include<stdio.h>
 #include<string.h>
-#include <stdlib.h>
-#include "global.h"
+#include<stdlib.h>
+#pragma warning(disable : 4996)
+#include "getfield.h"
 #include"candidate_details.h"
 int candidate_details(char* province)
 {
@@ -62,8 +63,6 @@ int candidate_details(char* province)
 	}
 
 	fclose(fp);
-        printf("\n\n\tPress Enter to vote...!!");
-	getch() == 13;
 	int vote_casted = cast_vote(province);
 	return vote_casted;
 }
