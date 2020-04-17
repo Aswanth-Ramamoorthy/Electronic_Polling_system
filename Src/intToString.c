@@ -1,7 +1,7 @@
 #include<conio.h>
 #include<stdio.h>
 #include<string.h>
-#include <stdlib.h>
+#pragma warning(disable : 4996)
 #include"intToString.h"
 // Convert int to string
 char* intToString(int num, char* str)
