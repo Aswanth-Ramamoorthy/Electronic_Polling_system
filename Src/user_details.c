@@ -8,8 +8,11 @@ int user_details(char* name)
 {
 	char buf[1024];
 	int row = 0, col = 0;
-	printf("\n==========================================");
+	printf("\n==========================================================================");
+	printf("\n\n");
+	printf("\n========================");
 	printf("\nUSER INFORMATION");
+	printf("\n========================");
 	FILE* fp = fopen("userdetails.csv", "r");
 	if (!fp) {
 		printf("Can't open file\n");
@@ -27,7 +30,6 @@ int user_details(char* name)
 		printf("\n");
 		char* string = field;
 		string = strtok(NULL, ",");
-		//printf("%s", field);
 		if (strcmp(field, name) == 0)
 		{
 			while (field)
@@ -42,6 +44,7 @@ int user_details(char* name)
 				}
 				if (col == 2) {
 					printf("Age:\t");
+
 				}
 				if (col == 3) {
 					printf("Phone:\t");
@@ -52,6 +55,8 @@ int user_details(char* name)
 				if (col == 5) {
 					printf("Province:\t");
 					printf("%s\n", field);
+					printf("\n\nPress Enter to view the candidates in your Province...!!");
+					getch();
 					candidate_details(field);
 					break;
 				}
@@ -66,6 +71,5 @@ int user_details(char* name)
 	}
 
 	fclose(fp);
-
 	return 0;
 }
