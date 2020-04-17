@@ -1,8 +1,9 @@
 #include<conio.h>
 #include<stdio.h>
 #include<string.h>
-#include <stdlib.h>
+#pragma warning(disable : 4996)
 #include "getFileColSize.h"
+#include"getfield.h"
 int getFileColSize(char* tmp) {
 	char* tempHeaderRow = getfield(tmp, 1);
 	char* token = strtok(tempHeaderRow, ",");
