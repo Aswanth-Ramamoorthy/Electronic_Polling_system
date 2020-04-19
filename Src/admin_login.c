@@ -1,20 +1,21 @@
 #include<conio.h>
 #include<stdio.h>
 #include<string.h>
-#include <stdlib.h>
-#include"admin_login.h"
-#include "global.h"
+#include<stdlib.h>
+#include"..include/admin_login.h"
+
 int admin_login()
 {
+	static int i = 0;
 	char adminID[15];
 	char adminpass[12];
 	printf("Enter your Admin-ID:\n");
-	scanf("%s", &adminID);
+	scanf("%s", &adminID);//inputs admin ID from user
 	printf("Enter your password:\n");
 	for (i = 0; i < 8; i++)
 	{
 		adminpass[i] = getch();
-		printf("*");
+		printf("*");//hides password from user input terminal
 	}
 	adminpass[i] = '\0';
 	if (strcmp(adminID, "Admin") == 0)
@@ -22,18 +23,20 @@ int admin_login()
 		if (strcmp(adminpass, "white!23") == 0)
 		{
 			printf("\nWelcome.Login Success!");
-			const int final_results = display_results();
-			return final_results;
+			return 1;//returns when login succeeds
+	
 		}
-		else {
+		else 
+		{
 			printf("\nwrong password");
-			return 0;
+			return 0;//returns when password is incorrect
 		}
 	}
-	else {
-		printf("\nUser doesn't exist");
-	}
-	return admin_login();
+	else
+    {
+	    return -1;//returns if admin ID is incorrect
+    }
+	
 }
 
 
