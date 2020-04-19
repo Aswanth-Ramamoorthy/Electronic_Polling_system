@@ -45,7 +45,7 @@ int candidate_details(char* province)
 				{
 					printf("Below are your candidates for your Province:");
 					printf("%s", token);
-					printf("\n--------------------------");
+					printf("\n---------------------------");
 					col++;
 					continue;
 				}
