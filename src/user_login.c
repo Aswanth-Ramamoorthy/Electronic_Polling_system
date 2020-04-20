@@ -1,16 +1,15 @@
 #include<conio.h>
 #include<stdio.h>
 #include<string.h>
-#include"..include/user_login.h"
-#include"..include/user_details.h"
+#include"../include/user_login.h"
+#include"../include/user_details.h"
 int user_login()
 {
 	static int i = 0;
 	char username[15];
 	char password[12];
-	char* str[1024];
 	FILE* fp = fopen("../data/auth.csv", "r");//file containing user authentication details
-	printf("--*--*--*--*--*--*--*--*--*");
+	printf("\n--*--*--*--*--*--*--*--*--*");
 	printf("\n\tUSER LOGIN\n");
 	printf("--*--*--*--*--*--*--*--*--*\n");
 	printf("Enter your username:\n");
@@ -64,16 +63,14 @@ int user_login()
 		user_login();//making the function available for user to retry
         fclose(fp);
         return -1;//returns when login fails
-	}
-	else
-	{
-		printf("\nStatus:Successful Login");
-		printf("\n\n");
-		printf("\nPress enter to view your details");
-		getch();
-		user_details(username);//this function displays details of the user
-        fclose(fp);
-        return 1;//returns when login succeeds
+	}else{
+			printf("\nStatus:Successful Login");
+			printf("\n\n");
+			printf("\nPress enter to view your details");
+			getch();
+			user_details(username);//this function displays details of the user
+			fclose(fp);
+			return 1;//returns when login succeeds
 	}
 }
 
