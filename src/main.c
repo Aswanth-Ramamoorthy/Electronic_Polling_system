@@ -1,4 +1,4 @@
-#include "Function.h"
+#include "../include/Function.h"
 #include<conio.h>
 #include<stdio.h>
 #include<string.h>
@@ -14,7 +14,6 @@ int main()
 	printf("1.You can vote only once.\n2.Login using your User-ID and Password.\n3.Proceed to vote if your information displayed is correct.\n4.Please be fair and impartial in voting");
 	printf("\n\n\t\t\t\tIf you agree Press Enter to proceed...!!");
 	if (getch() == 13)
-		
 		XY:
 	printf("\n\n\n\t\t\t\t1. Admin Login\t\t2. User Login");//option to choose level of access
 	printf("\n\n\n\t\t\t\t\tENTER YOUR CHOICE: ");
