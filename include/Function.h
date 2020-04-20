@@ -20,6 +20,5 @@
 #include "getFileColSize.h"
 #include "intToString.h"
 #include "cast_vote.h"
-#pragma warning(disable:4996)
 #define itoa(x) 
 #endif
