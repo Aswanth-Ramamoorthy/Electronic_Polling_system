@@ -25,6 +25,6 @@
 * @param[out] The function calls the candidate_details function the display the candidates in particular province.
 *
 * @return Returns 0 if the file can't open, Return 1 if name is valid and -1 if the name is invalid
-*/.
+**/
 extern int user_details(char* name);
 #endif 
