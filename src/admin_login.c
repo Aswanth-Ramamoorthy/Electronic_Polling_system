@@ -2,7 +2,7 @@
 #include<stdio.h>
 #include<string.h>
 #include<stdlib.h>
-#include"..include/admin_login.h"
+#include "../include/admin_login.h"
 
 int admin_login()
 {
@@ -24,19 +24,13 @@ int admin_login()
 		{
 			printf("\nWelcome.Login Success!");
 			return 1;//returns when login succeeds
-	
+
 		}
-		else 
-		{
+		else {
 			printf("\nwrong password");
 			return 0;//returns when password is incorrect
 		}
 	}
-	else
-    {
-	    return -1;//returns if admin ID is incorrect
-    }
-	
 }
 
 
