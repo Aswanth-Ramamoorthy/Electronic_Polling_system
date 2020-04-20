@@ -3,7 +3,7 @@
 #include<string.h>
 #include<stdlib.h>
 #include "getfield.h"
-#include"candidate_details.h"
+#include"../include/candidate_details.h"
 int candidate_details(char* province)
 {
 	char buf[1024];
@@ -45,7 +45,7 @@ int candidate_details(char* province)
 				{
 					printf("Below are your candidates for your Province:");
 					printf("%s", token);
-					printf("\n---------------------------");
+					printf("\n--------------------------");
 					col++;
 					continue;
 				}
@@ -71,6 +71,5 @@ int candidate_details(char* province)
 	printf("\nPress Enter to vote...!!");
 	getch();
 	printf("\n\n\n");
-	int vote_casted = cast_vote(province);
-	return vote_casted;
+	cast_vote(province);
 }
