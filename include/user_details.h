@@ -11,7 +11,7 @@
 #define _USER_DETAILS_H_
 
 /**
-* @brief This function to display the user details from the file.
+* @brief This function is to display the user details from the file.
 *
 *
 * @details This function displays the available user information such as First name ,Last name,
@@ -22,9 +22,9 @@
 *
 * @param[in] The function takes the User name as the input parameter.
 *
-* @param[out] The function calls the candidate_details function the display the candidates in particular province.
+* @param[out] The function calls the candidate_details function and displays the candidates in the user's province.
 *
-* @return Returns 0 if the file can't open, Return 1 if name is valid and -1 if the name is invalid
+* @return Returns 0 if the username matches with the one in file, Returns 1 if name is not valid in file
 **/
 extern int user_details(char* name);
 #endif 
