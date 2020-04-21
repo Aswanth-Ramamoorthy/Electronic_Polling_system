@@ -1,8 +1,8 @@
 /**
  * @file candidate_details.h
  *
- * @brief Implementation of Candidate_details function to display the candidates contesting in
- * particular province
+ * @brief Implementation of candidate_details function to display the candidates contesting in
+ * a particular province
  * 
  *
  * @author Priyanga Soundararajan - priyangasoundararaja@cmail.carleton.ca
@@ -16,11 +16,10 @@
  *
  * @param[in] The function takes “province” as input parameter. 
  *
- * @param[out] The function returns “candidate_number” which is the 
- * candidate number provided as input by the user. 
+ * @param[out] The function displays candidate details in the logged in user's province
  *
- * @return Return 0 when file can't open.
+ * @return Return 0 when entered province is valid else return 1
  *
  **/
-extern int candidate_details(char* province);
+extern int candidate_details(char* province,char* username);
 #endif 

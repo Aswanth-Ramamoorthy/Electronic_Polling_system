@@ -4,7 +4,7 @@
  * @brief Implementation of replacing a character with other.
  *
  *
- * @author Aswanth Ramamoorthy-aswanthramamoorthy@cmail.carleton.ca
+ * @author Priyanga Soundararajan-priyangasoundararaja@cmail.carleton.ca
  *
  **/
 #ifndef _REPLACE_CHAR_H_
