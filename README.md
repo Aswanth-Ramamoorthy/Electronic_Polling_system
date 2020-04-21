@@ -13,7 +13,7 @@ Electronic Polling machine is a software that allows users to vote with high aut
 
 # Authors
 
-- Vignesh Balaji - vigneshbalaji@cmail.carleton.ca-  (101139628) -  Carleton University
+- Vignesh Balaji - vigneshbalaji@cmail.carleton.ca -  (101139628) -  Carleton University
 - Priyanga Soundararajan  -  priyangasoundararaja@cmail.carleton.ca -  (101139629) -  Carleton University
 - Aswanth Ramamoorthy  -  aswanthramamoorthy@cmail.carleton.ca -  (101142819) -  Carleton University
 - Soma Sundaram Ravindran  - somasundaramravindra@cmail.carleton.ca -  (101137129) -  Carleton University
