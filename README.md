@@ -1,4 +1,4 @@
-﻿# Electronic-Polling-System
+# Electronic-Polling-System
 
 Electronic Polling machine is a software that allows users to vote with high authenticity, reliability and ease of voting on the go.
 
@@ -33,6 +33,7 @@ The correct file structure
 
 ```
 ├── assets				-> Flowchart
+├── Electronic_polling_system_config	-> Doxygen file
 ├── INSTALL.md				-> Installation Guide
 ├── LICENSE				-> License file
 ├── Makefile				-> Makefile
@@ -110,4 +111,3 @@ This project is licensed under the GPL 2.0 License - see the [LICENSE.md](https:
 # Acknowledgements
 
 Thank to Dr. Cristina Ruiz Martin for providing guidance on how to develop the software.
-
