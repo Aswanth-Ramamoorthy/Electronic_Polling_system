@@ -26,9 +26,9 @@ The program flow for the application is as follows:
   - The function in secondary_authentication.c to get identity proof details of the voter from a government approved proof such as Voter_card, Passport and Provincial_card.
   - The function in user_details.c to display the detailed information about the voter such as First_name, Last_name, Age, Phone_number, Postal_code and Province.
   - The function in candidate_details.c to display the list of all the candidates available based on province of the voter.
-  - The function in getfield.c to read the field of any csv file.
-  - The function in intTostring.c to convert integer to string.
-  - The function in getFileColSize.c to read the column values of the csv files.
+  - The function in get_field.c to read the field of any csv file.
+  - The function in int_to_string.c to convert integer to string.
+  - The function in get_file_col_size.c to read the column values of the csv files.
   - The function in cast_vote.c to enable the users to cast the vote from list of candidates displayed according to their respective province.
   - The function in attempt_count.c to keep track of voting history of the voter for preventing duplicate entries.
 
