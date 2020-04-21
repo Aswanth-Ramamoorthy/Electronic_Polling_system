@@ -13,13 +13,12 @@
 /**
  *
  * @brief The function to cast vote for the preferred candidate. 
- * @param[in] the function takes “Candidate_ID” as input parameter. 
+ * @param[in] the function takes “province” as input parameter and gets "candidate_id" as input from the user input terminal
  *
- * @param[out] The function returns “Vote_casted” when vote is casted for the preferred candidate. 
- * candidate number provided as input by the user. 
+ * @param[out] The function calls "attemp_count" function and displays a message to the user
  *
- * @return Return 0 when file can't open and return -1 if vote is casted.
+ * @return Return 0 when vote is casted and return 1 if "candidate_id" id invalid to cast vote.
  *
  **/
-extern int cast_vote(char* province);
+extern int cast_vote(char* province, char* username);
 #endif 
