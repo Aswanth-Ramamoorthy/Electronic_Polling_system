@@ -20,12 +20,12 @@ Electronic Polling machine is a software that allows users to vote with high aut
 
 # Installation
 
-Installation steps are mentioned in [INSTALL.md](https://github.com/Epolling/Electronic_Polling_system/blob/dev/INSTALL.md)
+Installation steps are mentioned in [INSTALL.md](https://github.com/Epolling/Electronic_Polling_system/blob/master/INSTALL.md)
 
 # Usage
 
 To run, you must first install it. Then you can follow instructions mentioned in
-[User_Manual.md](https://github.com/Epolling/Electronic_Polling_system/blob/dev/doc/User_Manual.md).
+[User_Manual.md](https://github.com/Epolling/Electronic_Polling_system/blob/master/doc/User_Manual.md).
 
 # File Structure
 
@@ -116,12 +116,12 @@ The instructions below have been verified to work on Windows using Cygwin and gc
 
 # For Developers
 
-The developer manual is available [here](https://github.com/Epolling/Electronic_Polling_system/blob/dev/doc/Developer_Manual.md).
+The developer manual is available [here](https://github.com/Epolling/Electronic_Polling_system/blob/master/doc/Developer_Manual.md).
 
 # License
 
-This project is licensed under the GPL 2.0 License - see the [LICENSE.md](https://github.com/Epolling/Electronic_Polling_system/blob/dev/LICENSE) file for details.
+This project is licensed under the GPL 2.0 License - see the [LICENSE.md](https://github.com/Epolling/Electronic_Polling_system/blob/master/LICENSE) file for details.
 
 # Acknowledgements
 
-Thank to Dr. Cristina Ruiz Martin for providing guidance on how to develop the software.
+Thanks to Dr. Cristina Ruiz Martin for providing guidance on how to develop the software.
