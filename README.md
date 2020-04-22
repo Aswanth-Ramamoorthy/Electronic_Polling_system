@@ -33,12 +33,6 @@ The correct file structure
 
 ```
 ├── assets				-> Flowchart
-├── Electronic_polling_system_config	-> Doxygen file
-├── INSTALL.md				-> Installation Guide
-├── LICENSE				-> License file
-├── Makefile				-> Makefile
-├── Project Documentation		-> Complete Project Document 
-├── README.md				-> Readme file
 ├── bin					-> Binary directory
 ├── data				-> csv files
 │   ├── Candidate_details.csv
@@ -46,12 +40,12 @@ The correct file structure
 │   ├── Second_auth1.csv
 │   ├── userdetails.csv
 │   └── vote_count.csv
-│   		
+│ 
 ├── doc
 │   ├── html				-> Doxygen document
 │   ├── Developer_Manual.md		-> Developer document
 │   └── User_Manual.md			-> User document
-│   
+│ 
 ├── include				-> Header files
 │   ├── admin_login.h
 │   ├── attempt_count.h
@@ -81,13 +75,33 @@ The correct file structure
 │   ├── secondary_authentication.c
 │   ├── user_details.c
 │   └── user_login.c
+│ 
 │  
-└── test
-    ├── include
-    │   └── test_all_user_cases.h	-> header file for testing 
-    │		    
-    └── tests.c				-> Main function for testing 
-        └── test_all_user_cases.h
+├── test
+│   ├── data				-> csv files for testing
+│   │   ├── temp.csv
+│   │   ├── test_auth.csv
+│   │   ├── candidate_details.csv
+│   │   ├── test_second_auth.csv
+│   │   ├── test_user_details.csv
+│   │   └── test_vote_count.csv	
+│   │		
+│   ├── include
+│   │   └── test_all_cases.h		-> header file for testing 
+│   │	
+│   ├── results
+│   │   └── results.csv			-> header file for testing 
+│   │		    
+│   └── src				-> Main function for testing 
+│       └── test.c 
+│  
+├── Electronic_polling_system_config	-> Doxygen file
+├── INSTALL.md				-> Installation Guide
+├── LICENSE				-> License file
+├── Makefile				-> Makefile
+├── Project Documentation		-> Complete Project Document 
+└── README.md				-> Readme file
+ 		
 ```
 
 # How to Compile and Test
