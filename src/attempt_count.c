@@ -41,8 +41,8 @@ int attempt_count(char* username)
 
 	//  Open all required files 
 
-	fPtr = fopen("../data/userdetails.csv", "r+");
-	fTemp = fopen("../data/replace.csv", "w+");
+	fPtr = fopen("data/userdetails.csv", "r+");
+	fTemp = fopen("data/replace.csv", "w+");
 
 	// fopen() return NULL if unable to open file in given mode.
 	if (fPtr == NULL || fTemp == NULL) {
@@ -92,10 +92,10 @@ int attempt_count(char* username)
 
 
 	// Delete original source file 
-	remove("../data/userdetails.csv");
+	remove("data/userdetails.csv");
 
 	// Rename temporary file as original file 
-	rename("../data/replace.csv", "../data/userdetails.csv");
+	rename("data/replace.csv", "data/userdetails.csv");
 
     return 0;
 

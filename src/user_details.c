@@ -40,7 +40,7 @@ int user_details(char* name) {
 	printf("\n========================");
 	printf("\nUSER INFORMATION");
 	printf("\n========================");
-	FILE* fp = fopen("../data/userdetails.csv", "r");//Open file containing details of all users or voters
+	FILE* fp = fopen("data/userdetails.csv", "r");//Open file containing details of all users or voters
 	if (!fp) {
 
 		printf("Can't open file\n");
@@ -114,5 +114,6 @@ int user_details(char* name) {
 			printf("\n");
 		}
 	}
+        fclose(fp);
 	return 0;
 }

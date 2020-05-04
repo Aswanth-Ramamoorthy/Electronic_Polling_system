@@ -46,14 +46,14 @@ int cast_vote(char* province,char* username){
 
 	if ((strcmp(candidate_id, "Candidate1") == 0) || (strcmp(candidate_id, "Candidate2") == 0) || (strcmp(candidate_id, "Candidate3") == 0) || (strcmp(candidate_id, "Candidate4") == 0) || (strcmp(candidate_id, "Candidate5") == 0)){
 
-		fp = fopen("../data/vote_count.csv", "r+");
+		fp = fopen("data/vote_count.csv", "r+");
 
 		if (!fp) {
 
 			printf("Can't open file\n");
 			return -1; //returns when file does not exist
 		}
-        FILE* tempVoteFile = fopen("../data/temp.csv", "w+");  
+        FILE* tempVoteFile = fopen("data/temp.csv", "w+");  
 		int row = 0;
 		while (fgets(buf, 1024, fp)){
 
@@ -143,8 +143,8 @@ int cast_vote(char* province,char* username){
 		fgetc(stdin);
 		printf("Press any key to exit");
 		fclose(tempVoteFile);
-		remove("../data/vote_count.csv"); //removes the vote_count files
-		rename("../data/temp.csv", "../data/vote_count.csv");// renames the temp file to vote_count file
+		remove("data/vote_count.csv"); //removes the vote_count files
+		rename("data/temp.csv", "data/vote_count.csv");// renames the temp file to vote_count file
 		attempt_count(username);
 		return 0;
 
