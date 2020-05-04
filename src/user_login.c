@@ -32,7 +32,7 @@ int user_login(){
 
 	char username[30];
 	char password[30];
-	FILE* fp = fopen("../data/auth.csv", "r");//file containing user authentication details
+	FILE* fp = fopen("data/auth.csv", "r");//file containing user authentication details
 	printf("\n--*--*--*--*--*--*--*--*--*");
 	printf("\n\tUSER LOGIN\n");
 	printf("--*--*--*--*--*--*--*--*--*\n");

@@ -59,7 +59,7 @@ int secondary_authentication(char* name){
 	printf("\nEnter the ID-number(Exactly Printed on your ID):");
 	scanf("%s", &ID_number);
 	int b = atoi(ID_number);
-	FILE* fp = fopen("../data/second_auth1.csv", "r");//file that has details of user's secondary authentication
+	FILE* fp = fopen("data/second_auth1.csv", "r");//file that has details of user's secondary authentication
 	char string[1024];
 	int row_count = 0;
 	int field_count = 0, flag = 0;

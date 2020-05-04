@@ -34,7 +34,7 @@ int candidate_details(char* province, char* username){
 	printf("\n==========================================");
 	printf("\nCANDIDATES INFORMATION");
 	printf("\n------------------------------------------");
-	FILE* fp = fopen("../data/candidate_details.csv", "r");
+	FILE* fp = fopen("data/candidate_details.csv", "r");
 	if (!fp) {
 
 		printf("Can't open file\n"); //returns when file does not exist

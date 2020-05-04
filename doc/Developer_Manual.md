@@ -39,8 +39,4 @@ The program flow for the application is as follows:
 
 # Documentation
 
-<<<<<<< HEAD
 Complete documentation of the source code can be found [here](https://github.com/Epolling/Electronic_Polling_system/tree/dev/doc/html/index.html).
-=======
-Complete documentation of the source code can be found [here](https://github.com/Epolling/Electronic_Polling_system/blob/master/doc/html/index.html).
->>>>>>> master

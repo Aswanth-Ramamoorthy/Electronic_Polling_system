@@ -9,7 +9,7 @@ int test_user_login(){
 
     char username[15];
     char password[12];
-    FILE* fp = fopen("../test/data/test_auth.csv", "r");//file containing user authentication details
+    FILE* fp = fopen("test/data/test_auth.csv", "r");//file containing user authentication details
     printf("\n--*--*--*--*--*--*--*--*--*");
     printf("\n\tUSER LOGIN\n");
     printf("--*--*--*--*--*--*--*--*--*\n");
@@ -90,7 +90,7 @@ int test_user_details(char* name){
     printf("\n========================");
     printf("\nUSER INFORMATION");
     printf("\n========================");
-    FILE* fp = fopen("../test/data/test_user_details.csv", "r");
+    FILE* fp = fopen("test/data/test_user_details.csv", "r");
     if (!fp){
 
         printf("Can't open file\n");
@@ -225,7 +225,7 @@ int test_cast_vote(char* province){
     scanf("%s", &candidate_id);
     if ((strcmp(candidate_id, "Candidate1") == 0) || (strcmp(candidate_id, "Candidate2") == 0) || (strcmp(candidate_id, "Candidate3") == 0) || (strcmp(candidate_id, "Candidate4") == 0) || (strcmp(candidate_id, "Candidate5") == 0)){
 
-        fp = fopen("../test/data/test_vote_count.csv", "r+");
+        fp = fopen("test/data/test_vote_count.csv", "r+");
 
         if (!fp){
 
@@ -233,7 +233,7 @@ int test_cast_vote(char* province){
             return -1;
         }
 
-        FILE* tempVoteFile = fopen("../test/data/temp.csv", "w+");
+        FILE* tempVoteFile = fopen("test/data/temp.csv", "w+");
         int row = 0;
         while (fgets(buf, 1024, fp)){
 
@@ -321,8 +321,8 @@ int test_cast_vote(char* province){
         printf("Press any key to exit");
         fgetc(stdin);
         fclose(tempVoteFile);
-        remove("../test/data/test_vote_count.csv");
-        rename("../test/data/temp.csv", "../test/data/test_vote_count.csv");
+        remove("test/data/test_vote_count.csv");
+        rename("test/data/temp.csv", "test/data/test_vote_count.csv");
         return 0;
     }else{
 
@@ -340,7 +340,7 @@ int test_candidate_details(char* province){
     printf("\n==========================================");
     printf("\nCANDIDATES INFORMATION");
     printf("\n------------------------------------------");
-    FILE* fp = fopen("../test/data/test_candidate_details.csv", "r");
+    FILE* fp = fopen("test/data/test_candidate_details.csv", "r");
     if (!fp){
 
         printf("Can't open file\n");
@@ -464,7 +464,7 @@ int test_secondary_authentication(char* name){
     printf("\nEnter the ID-number(Exactly Printed on your ID):");
     scanf("%s", &ID_number);
     int b = atoi(ID_number);
-    FILE* fp = fopen("../test/data/test_second_auth.csv", "r");
+    FILE* fp = fopen("test/data/test_second_auth.csv", "r");
     char string[1024];
     int row_count = 0;
     int field_count = 0, flag = 0;
@@ -538,7 +538,7 @@ int test_display_count(){
     char filename[100];
 
     printf("\nEnter the filename in the following format to open \n");
-    printf("\nExample: ../test/data/filename\n");
+    printf("\nExample: test/data/filename\n");
     scanf("%s", &filename);
 
     // Open file
@@ -574,7 +574,7 @@ int test_all_cases() {
     printf("\n\n\t\t\t\tIf you agree Press Enter to proceed...!!");
     fgetc(stdin);
     int value, choice;
-    FILE* test_output = fopen("../test/data/test_output.csv", "w");
+    FILE* test_output = fopen("test/data/test_output.csv", "w");
     printf("\n1. Enter 1 to test admin login function.\n");
     printf("\n2. Enter 2 to test user details function.\n");
     printf("\n3. Enter 3 to test cast vote function.\n");

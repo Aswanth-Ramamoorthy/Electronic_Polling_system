@@ -30,7 +30,7 @@ int display_count(){
 	char filename[100];
 
 	printf("\nEnter the filename in the following format to open \n");
-	printf("\nExample: ../data/filename\n");
+	printf("\nExample: data/filename\n");
 	scanf("%s", filename);//reads file name from input by admin 
 
 	// Open file

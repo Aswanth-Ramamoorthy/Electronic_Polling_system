@@ -60,7 +60,7 @@ int main(int argc, char* argv[]) {
 			printf("\n");
 			printf("\nStep 2: Enter Admin ID and Password when prompted\n");
 			printf("\nStep 3: You are logged in as admin and have access to view poll results\n");
-			printf("\nStep 4: Enter ../src/data/vote_count.csv for normal execution and ../test/data/test_vote_count.csv for test mode\n");
+			printf("\nStep 4: Enter src/data/vote_count.csv for normal execution and test/data/test_vote_count.csv for test mode\n");
 			printf("\nStep 5: You can view the results now\n");
 			printf("\n");
 			printf("\n");
@@ -97,7 +97,7 @@ int main(int argc, char* argv[]) {
 			printf("\n");
 			printf("\nDisplay Results Inputs\n");
 			printf("\n");
-			printf("\nFilename: ../test/data/test_vote_count.csv\n");
+			printf("\nFilename: test/data/test_vote_count.csv\n");
 			printf("\n");
 			printf("\n");
 			printf("\n");
