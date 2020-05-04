@@ -8,7 +8,6 @@
  *
  **/
 
-#include<conio.h>
 #include<stdio.h>
 #include<string.h>
 #include"../include/replace_char.h"
