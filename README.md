@@ -20,12 +20,20 @@ Electronic Polling machine is a software that allows users to vote with high aut
 
 # Installation
 
+<<<<<<< HEAD
 Installation steps are mentioned in [INSTALL.md](https://github.com/Epolling/Electronic_Polling_system/blob/dev/INSTALL.md)
+=======
+Installation steps are mentioned in [INSTALL.md](https://github.com/Epolling/Electronic_Polling_system/blob/master/INSTALL.md)
+>>>>>>> master
 
 # Usage
 
 To run, you must first install it. Then you can follow instructions mentioned in
+<<<<<<< HEAD
 [User_Manual.md](https://github.com/Epolling/Electronic_Polling_system/blob/dev/doc/User_Manual.md).
+=======
+[User_Manual.md](https://github.com/Epolling/Electronic_Polling_system/blob/master/doc/User_Manual.md).
+>>>>>>> master
 
 # File Structure
 
@@ -116,6 +124,7 @@ The instructions below have been verified to work on Windows using Cygwin and gc
 
 # For Developers
 
+<<<<<<< HEAD
 The developer manual is available [here](https://github.com/Epolling/Electronic_Polling_system/blob/dev/doc/Developer_Manual.md).
 
 # License
@@ -125,3 +134,14 @@ This project is licensed under the GPL 2.0 License - see the [LICENSE.md](https:
 # Acknowledgements
 
 Thank to Dr. Cristina Ruiz Martin for providing guidance on how to develop the software.
+=======
+The developer manual is available [here](https://github.com/Epolling/Electronic_Polling_system/blob/master/doc/Developer_Manual.md).
+
+# License
+
+This project is licensed under the GPL 2.0 License - see the [LICENSE.md](https://github.com/Epolling/Electronic_Polling_system/blob/master/LICENSE) file for details.
+
+# Acknowledgements
+
+Thanks to Dr. Cristina Ruiz Martin for providing guidance on how to develop the software.
+>>>>>>> master
