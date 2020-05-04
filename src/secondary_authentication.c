@@ -8,7 +8,6 @@
  *
  **/
 
-#include<conio.h>
 #include<stdio.h>
 #include<string.h>
 #include<stdlib.h>
@@ -46,7 +45,7 @@ int secondary_authentication(char* name){
 	printf("\n\t 1.Voter card.\n\t 2.Passport.\n\t 3.Provincial card");
 	printf("\n\nIf you have any one of this ID's Press Enter to proceed...!!\n");
 
-	getch();
+	fgetc(stdin);
 	printf("\n===========================================================================\n");
 
 	printf("\n\n");
@@ -102,19 +101,22 @@ int secondary_authentication(char* name){
 		}
 	}
 	if (flag == 0){
-
+		char ch;
 		printf("\nStatus:Invalid User ID's");
+		fgetc(stdin);
 		printf("\n");
-		printf("\n\n\t\t\t\t  (PRESS [Y] TO RE-LOGIN)");
-		if (getch() == 'y' || getch() == 'Y'){
+		printf("\n\n\t\t\t\t  (PRESS [y] and enter TO RE-LOGIN): ");
+		scanf("%c",&ch);
+		if (ch == 'y'|| ch == 'Y'){
 			secondary_authentication(name);//option to retry
 		}
 	}else{
 
 		printf("\nStatus:Successful Login");
 		printf("\n\nSelected ID is Valid");
+	        fgetc(stdin);
 		printf("\nPress Enter to display your details...!!");
-		getch();
+		fgetc(stdin);
 		user_details(name);// TO call the user details function to display user details
 
 	}

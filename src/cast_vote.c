@@ -8,7 +8,6 @@
  *
  **/
 
-#include<conio.h>
 #include<stdio.h>
 #include<string.h>
 #include <stdlib.h>
@@ -141,8 +140,8 @@ int cast_vote(char* province,char* username){
 		printf(" successfully.");
 		printf("\n\nThank you!!!");
 		printf("\n\n");
+		fgetc(stdin);
 		printf("Press any key to exit");
-		getch();
 		fclose(tempVoteFile);
 		remove("../data/vote_count.csv"); //removes the vote_count files
 		rename("../data/temp.csv", "../data/vote_count.csv");// renames the temp file to vote_count file
