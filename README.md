@@ -35,9 +35,9 @@ The correct file structure
 ├── assets				-> Flowchart
 ├── bin					-> Binary directory
 ├── data				-> csv files
-│   ├── Candidate_details.csv
+│   ├── candidate_details.csv
 │   ├── auth.csv
-│   ├── Second_auth1.csv
+│   ├── second_auth1.csv
 │   ├── userdetails.csv
 │   └── vote_count.csv
 │ 
