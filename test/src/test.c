@@ -3,12 +3,10 @@
 #include <stdio.h>
 #include <string.h>
 #include<stdlib.h>
-#include<conio.h>
 #define itoa(x)
 
 int test_user_login(){
 
-    int i;
     char username[15];
     char password[12];
     FILE* fp = fopen("../test/data/test_auth.csv", "r");//file containing user authentication details
@@ -17,15 +15,9 @@ int test_user_login(){
     printf("--*--*--*--*--*--*--*--*--*\n");
     printf("Enter your username:\n");//fetching input from user
     scanf("%s", &username);
-
+    fgetc(stdin);
     printf("Enter your password:\n");
-    for (i = 0; i < 6; i++){
-
-        password[i] = getch();
-        printf("*");//to hide the password on input screen
-
-    }
-    password[i] = '\0';
+    scanf("%s", &password);
     char string[1024];
     int row_count = 0;
     int field_count = 0, flag = 0;
@@ -62,12 +54,16 @@ int test_user_login(){
     }
     if (flag == 0)
     {
+	char ch;
         printf("\nStatus:Invalid login");
         return 0;
-        printf("\n");
-        printf("\n\n\t\t\t\t  (PRESS [Y] TO RE-LOGIN)");
-        if (getch() == 'y' || getch() == 'Y')
+	fgetc(stdin);
+	printf("\n");
+	printf("\n\n\t\t\t\t  (PRESS [y] and enter TO RE-LOGIN): ");
+	scanf("%c",&ch);
+	if (ch == 'y'|| ch == 'Y'){
         test_user_login();
+	}
 
     }else{
 
@@ -76,7 +72,7 @@ int test_user_login(){
         printf("\n\n");
         return 1;
         printf("\nPress enter to proceed for secondary authentication");
-        getch();
+        fgetc(stdin);
         test_secondary_authentication(username);
         
     }
@@ -146,7 +142,7 @@ int test_user_details(char* name){
                     printf("Province:\t");
                     printf("%s\n", field);
                     printf("\n\nPress Enter to view the candidates in your Province...!!");
-                    getch();
+                    fgetc(stdin);
                     test_candidate_details(field);
                     return 0;
                     break;
@@ -323,7 +319,7 @@ int test_cast_vote(char* province){
         printf("\n\nThank you!!!");
         printf("\n\n");
         printf("Press any key to exit");
-        getch();
+        fgetc(stdin);
         fclose(tempVoteFile);
         remove("../test/data/test_vote_count.csv");
         rename("../test/data/temp.csv", "../test/data/test_vote_count.csv");
@@ -332,7 +328,7 @@ int test_cast_vote(char* province){
 
         printf("Please enter a valid candidate number as given in the e.g");
         printf("\n\n");
-         return 1;
+        return 1;
         test_cast_vote(province);
     }
     return -2;
@@ -403,8 +399,7 @@ int test_candidate_details(char* province){
 
     fclose(fp);
     printf("\nPress Enter to vote...!!");
-     return 0;
-    getch();
+    return 0;
     printf("\n\n\n");
     test_cast_vote(province);
 
@@ -412,18 +407,13 @@ int test_candidate_details(char* province){
 
 int test_admin_login() {
 
-    static int i = 0;
     char adminID[15];
     char adminpass[12];
     printf("Enter your Admin-ID:\n");
     scanf("%s", &adminID);
     printf("Enter your password:\n");
-    for (i = 0; i < 8; i++) {
-
-        adminpass[i] = getch();
-        printf("*");
-    }
-    adminpass[i] = '\0';
+    scanf("%s",&adminpass);
+    fgetc(stdin);
     if (strcmp(adminID, "Admin") == 0) {
 
         if (strcmp(adminpass, "white!23") == 0) {
@@ -435,10 +425,13 @@ int test_admin_login() {
 
         }
         else {
-
+	    char ch;
             printf("\nwrong password");
-            return 1;
-            if (getch() == 'y' || getch() == 'Y') {
+	    return 1;
+	    fgetc(stdin);
+	    printf("\n\n\t\t\t\t  (PRESS [y] and enter TO RE-LOGIN): ");
+	    scanf("%c",&ch);
+	    if (ch == 'y'|| ch == 'Y'){
                 test_admin_login();
             }
 
@@ -457,7 +450,7 @@ int test_secondary_authentication(char* name){
     printf("\n\n\nBelow are the list of Available ID's that are accepted to cast your vote");
     printf("\n\t 1.Voter card.\n\t 2.Passport.\n\t 3.Provincial card");
     printf("\n\nIf you have any one of this ID's Press Enter to proceed...!!\n");
-    getch();
+    fgetc(stdin);
     printf("\n===========================================================================\n");
 
     printf("\n\n");
@@ -514,12 +507,13 @@ int test_secondary_authentication(char* name){
         }
     }
     if (flag == 0){
-
+	char ch;
         printf("\nStatus:Invalid User ID's");
-        printf("\n");
-         return 0;
-        printf("\n\n\t\t\t\t  (PRESS [Y] TO RE-LOGIN)");
-        if (getch() == 'y' || getch() == 'Y') {
+        return 0;
+	printf("\n");
+	printf("\n\n\t\t\t\t  (PRESS [y] and enter TO RE-LOGIN): ");
+	scanf("%c",&ch);
+	if (ch == 'y'|| ch == 'Y'){
             test_secondary_authentication(name);
         }
 
@@ -529,7 +523,7 @@ int test_secondary_authentication(char* name){
           
         printf("\n\nSelected ID is Valid");
         printf("\nPress Enter to display your details...!!");
-        getch();
+        fgetc(stdin);
         test_user_details(name);
         return 1;
 
@@ -550,12 +544,12 @@ int test_display_count(){
     // Open file
     FILE* fp = fopen(filename, "r");
     if (!fp){
-
-        printf("Invalid File  \n");
-
-        printf("\n\n\t(PRESS [Y] TO RE-ENTER file name)");
-        return 0;
-        if (getch() == 'y' || getch() == 'Y') {
+                char ch;
+		printf("Cannot open file \n");
+		return 0;
+		printf("\n\n\t(PRESS [Y] TO RE-ENTER file name)");
+                scanf("%c",&ch);
+		if (ch == 'y' || ch == 'Y')  {
             test_display_count();
             
         }
@@ -572,13 +566,13 @@ int test_display_count(){
     return 1;
 }
 
-int test_all_cases(){
+int test_all_cases() {
 
     printf("\n\t\t\t\t============================================");
     printf("\n\t\t\t\tTest Functions for Electronic Polling System");
     printf("\n\t\t\t\t============================================");
     printf("\n\n\t\t\t\tIf you agree Press Enter to proceed...!!");
-    getch();
+    fgetc(stdin);
     int value, choice;
     FILE* test_output = fopen("../test/data/test_output.csv", "w");
     printf("\n1. Enter 1 to test admin login function.\n");
@@ -589,19 +583,20 @@ int test_all_cases(){
     printf("\n6. Enter 6 to test secondary authentication function. \n");
     printf("\n7. Enter 7 to test user login function.\n");
     scanf("%d", &choice);
-    switch (choice){
+    switch (choice) {
 
     case 1:
         printf("\nTesting admin login function\n");
-    
+
         value = test_admin_login(); //Passing correct username and wrong password
-        if (value == 0){
+        if (value == 0) {
 
             char c[400];
             sprintf(c, "1)Criteria Passed with correct username and password, Expected Output: 0, Output: %d .\n", value);
             printf(c);
             fprintf(test_output, c);
-        }else{
+        }
+        else {
 
             char c[400];
             sprintf(c, "1)Criteria Failed with incorrect username and password, Expected Output: 1, Output: %d .\n", value);
@@ -631,7 +626,8 @@ int test_all_cases(){
             sprintf(c, "2)Criteria Passed with provided username, Expected Output: 0, Output: %d .\n", value);
             printf(c);
             fprintf(test_output, c);
-        }else{
+        }
+        else {
             //When user credentials are invalid
             char c[400];
             sprintf(c, "2)Criteria Failed with provided usernmae, Expected Output: 1, Output: %d .\n", value);
@@ -655,7 +651,8 @@ int test_all_cases(){
             sprintf(c, "2)Criteria Passed with valid Candidate_ID, Valid Candidate_Id, Expected Output: 0, Output: %d .\n", value);
             printf(c);
             fprintf(test_output, c);
-        } else {
+        }
+        else {
             // When Candidate_Id is not valid
             char c[400];
             sprintf(c, "2)Criteria Failed with valid Candidate_ID, valid Candidate_Id: Candidate1, Expected Output: 1, Output: %d .\n", value);
@@ -682,7 +679,8 @@ int test_all_cases(){
             sprintf(c, "1)Criteria Passed with valid Filename: test_vote_count.csv, Expected Output: 1, Output: %d .\n", value);
             printf(c);
             fprintf(test_output, c);
-        } else {
+        }
+        else {
             char c[400];
             sprintf(c, "1)Criteria Failed with invalid Filename: vote_count.csv, Expected Output: 0, Output: %d .\n", value);
             printf(c);
@@ -706,7 +704,7 @@ int test_all_cases(){
         value = test_candidate_details(province);
 
         printf("\n");
-        if (value == 0){
+        if (value == 0) {
 
             char c[400];
             sprintf(c, "1)Criteria Passed with valid provided province ; Expected Output : 0, Output : % d .\n", value);
@@ -736,7 +734,8 @@ int test_all_cases(){
             sprintf(c, "2)Criteria Passed -matching ID-Type,ID-number and name_on_ID,Expected Output: 1, Output: %d .\n", value);
             printf(c);
             fprintf(test_output, c);
-        }else{
+        }
+        else {
 
             char c[400];
             sprintf(c, "2)Criteria Failed - unmatched ID-Type,ID-number and name_on_ID, Expected Output: 0, Output: %d .\n", value);
@@ -756,7 +755,8 @@ int test_all_cases(){
             printf(c);
             fprintf(test_output, c);
 
-        }else{
+        }
+        else {
 
             char c[400];
             sprintf(c, "2)Criteria Failed with incorrect Username, Password, Expected Output: 0, Output: %d .\n", value);
@@ -766,5 +766,6 @@ int test_all_cases(){
 
         break;
         fclose(test_output);
-    }return 0;
+    }
+    return 0;   
 }
