@@ -8,7 +8,6 @@
  *
  **/
 
-#include<conio.h>
 #include<stdio.h>
 #include<string.h>
 #include<stdlib.h>
@@ -95,7 +94,7 @@ int user_details(char* name) {
 					if (voted[0] == 'n')
 					{
 						printf("\n\nPress Enter to view the candidates in your Province...!!");
-						getch();
+						fgetc(stdin);
 						fclose(fp);
 						candidate_details(field, name);
 						break;

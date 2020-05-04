@@ -10,7 +10,6 @@
  *
  **/
 
-#include<conio.h>
 #include<stdio.h>
 #include<string.h>
 #include<stdlib.h>
@@ -92,6 +91,7 @@ int candidate_details(char* province, char* username){
 	}
 	fclose(fp);
 	printf("Press enter to cast your vote\n");
+	fgetc(stdin);
 	cast_vote(province,username);
 	return 0;
 	

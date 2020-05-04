@@ -10,7 +10,6 @@
  *
  **/
 
-#include<conio.h>
 #include<stdio.h>
 #include<string.h>
 #include"../include/int_to_string.h"

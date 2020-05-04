@@ -7,7 +7,6 @@
  * @author vignesh balaji - vigneshbalaji@cmail.carleton.ca
  *
  **/
-#include<conio.h>
 #include<stdio.h>
 #include<string.h>
 #include<stdlib.h>
@@ -29,19 +28,14 @@
  **/
 int admin_login(){
 
-	static int i = 0;
 	char adminID[15];
 	char adminpass[12];
 	printf("Enter your Admin-ID:\n");
 	scanf("%s", &adminID);//inputs admin ID from user
+	fgetc(stdin);
 	printf("Enter your password:\n");
-	for (i = 0; i < 8; i++){
-
-		adminpass[i] = getch();
-		printf("*");//hides password from user input terminal
-	}
-	adminpass[i] = '\0';
-
+	scanf("%s",&adminpass);
+	fgetc(stdin);
 	if (strcmp(adminID, "Admin") == 0) {
 
 		if (strcmp(adminpass, "white!23") == 0) {
@@ -51,9 +45,12 @@ int admin_login(){
 
 		}
 		else {
-
+			char ch;
 			printf("\nwrong password");
-			if (getch() == 'y' || getch() == 'Y') {
+			fgetc(stdin);
+			printf("\n\n\t\t\t\t  (PRESS [y] and enter TO RE-LOGIN): ");
+			scanf("%c",&ch);
+			if (ch == 'y'|| ch == 'Y'){ 
 				admin_login();//call the admin_login function again to get the inputs
 			}
 
